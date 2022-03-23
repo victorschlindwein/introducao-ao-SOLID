@@ -17,7 +17,7 @@ class CreateUserUseCase {
       throw new Error("Email is already registred");
     }
 
-    this.usersRepository.create({ email, name });
+    return this.usersRepository.create({ email, name });
   }
 }
 

@@ -1,7 +1,7 @@
 import { v4 as uuidV4 } from "uuid";
 
 class User {
-  id?: string;
+  id: string;
   name: string;
   admin: false;
   email: string;
@@ -11,6 +11,10 @@ class User {
   constructor() {
     if (!this.id) {
       this.id = uuidV4();
+    }
+
+    if (!this.admin) {
+      this.admin = false;
     }
   }
 }
